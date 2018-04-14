@@ -87,14 +87,6 @@ void timer_call1()
 	/***処理***/
 	run_manager();
 	reset_timer_enc();			// エンコーダリセット
-
-	/***フェイルセーフ***/
-// 	get_acc_vel_xf(&curr_vel);
-// 	get_desire_vel(&curr_desire_vel);
-// 	if(curr_desire_vel - curr_vel > 100.0){
-// //		set_end_flag(0);	
-// 	}
-
 }
 
 void timer_call2()

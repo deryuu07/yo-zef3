@@ -142,16 +142,14 @@ void PID_ctr()
 	batt = (float)sbatt;
 	
 	/***速度制御***/
-	if(!Uturn_flag){
-		vel_ctr(&u_vel_r, &u_vel_l);
-		u_r += u_vel_r;
-		u_l += u_vel_l;
-	}
+	vel_ctr(&u_vel_r, &u_vel_l);
+	u_r += u_vel_r;
+	u_l += u_vel_l;
 
 	/***姿勢制御***/
 	gyro_ctr(&u_gyro);
-	u_r -= u_gyro;
-	u_l += u_gyro;
+	u_r += u_gyro;
+	u_l -= u_gyro;
 
 	// get_debug_para(&debug_para);
 	// u_r = debug_para[0];

@@ -112,8 +112,6 @@ short run_start_step()
     float curr_dis = 0.0;
 
     /***制御処理***/
-    set_Uturn_flag(0);
-    set_run_state(STRAIGHT);
     update_accel2(ACCEL_STEP);
 
     /***終了処理***/
@@ -122,8 +120,6 @@ short run_start_step()
         reset_dis();
         reset_gyro_I();
         reset_angle();
-
-        run_state = map_manager();
         return 1;
     }
 
@@ -155,29 +151,5 @@ void run_manager()
     }
     else{
         run_stop();
-//         if(!run_state_flag){
-//             switch(run_state){
-//                 case STRAIGHT:
-//                     run_state_flag = run_straight();
-//                     break;
-//                 case LEFT_SLALOM:
-//                 case RIGHT_SLALOM:
-// //                    run_state_flag = run_slalom();
-//                     run_state_flag = run_straight();
-//                     break;
-//             }   
-//         }
-//         else{
-//             if(finish_cnt==2){
-//                 run_stop();
-//             }
-//             else{
-//                 run_state_flag = 0;
-//             }
-//         }
     }
-
-//    run_Uturn();
-
 }
-

@@ -31,8 +31,8 @@ void run_test()
     
     timer_start(1);
     timer_start(2);
-//    while(end_flag);
-    while(!timer_free_wait(3000));
+    while(end_flag);
+//    while(!timer_free_wait(3000));
 
     timer_stop(1);
     timer_stop(2);
