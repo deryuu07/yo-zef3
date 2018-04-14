@@ -1,0 +1,14 @@
+1. gyro_K_P  1300
+2. gyro_K_I    80
+3. gyro_K_D   200
+4. vel_K_P   800
+5. vel_K_I     1
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
