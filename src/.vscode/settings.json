@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "interface_manager.h": "c",
+        "utility.h": "c"
+    }
+}
