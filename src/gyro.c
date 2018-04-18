@@ -9,7 +9,7 @@ float gyro_dis = 0.0;   // ∫gyro_vel
 
 float desire_gyro = 0.0;
 float desire_max_gyro = 0.0;
-float gyro_accel = 6500.0;
+float gyro_accel = 0.0;
 
 void reset_angle()
 {
@@ -34,6 +34,12 @@ void get_desire_gyro(float *curr_desire)
 		*curr_desire = desire_gyro;
 }
 
+void get_gyro_accel(float *curr_accel)
+{
+    if(curr_accel != NULL)
+		*curr_accel = gyro_accel;
+}
+
 void gyro_update()
 {
 	gyro = (float)get_gyro(2) / 16.4;
@@ -54,17 +60,21 @@ short update_desire_gyro(short run_state)
 	if(run_state == LEFT_SLALOM){
 		if(gyro_angle < 66.7){
 			if(desire_gyro < desire_max_gyro){
+				gyro_accel = 6500.0;
 				desire_gyro += gyro_accel*DELTA_T; 
 			}
 			else{
+				gyro_accel = 0.0;
 				desire_gyro = desire_max_gyro; 
 			}
 		}
 		else{
 			if(desire_gyro > 0.0){
-				desire_gyro -= gyro_accel*DELTA_T; 
+				gyro_accel = -6500.0;
+				desire_gyro += gyro_accel*DELTA_T; 
 			}
 			else{
+				gyro_accel = 0.0;
 				desire_gyro = 0.0; 
 				return 1;
 			}
@@ -73,17 +83,21 @@ short update_desire_gyro(short run_state)
 	if(run_state == RIGHT_SLALOM){
 		if(gyro_angle > -66.7){
 			if(desire_gyro > -desire_max_gyro){
-				desire_gyro -= gyro_accel*DELTA_T; 
+				gyro_accel = -6500.0;
+				desire_gyro += gyro_accel*DELTA_T; 
 			}
 			else{
+				gyro_accel = 0.0;
 				desire_gyro = -desire_max_gyro; 
 			}
 		}
 		else{
 			if(desire_gyro < 0.0){
+				gyro_accel = 6500.0;
 				desire_gyro += gyro_accel*DELTA_T; 
 			}
 			else{
+				gyro_accel = 0.0;
 				desire_gyro = 0.0; 
 				return 1;
 			}

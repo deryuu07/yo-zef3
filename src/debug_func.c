@@ -32,7 +32,7 @@ void run_test()
     timer_start(1);
     timer_start(2);
     while(end_flag);
-//    while(!timer_free_wait(3000));
+//    while(!timer_free_wait(2000));
 
     timer_stop(1);
     timer_stop(2);
@@ -92,8 +92,8 @@ void out_accel()
     float curr_acc[3];
     float curr_acc_vel[3];
     count_down();
-    set_acc_offset();
-    reset_acc_vel();
+//    set_acc_offset();
+//    reset_acc_vel();
 
     while(1){
         get_acc(curr_acc);

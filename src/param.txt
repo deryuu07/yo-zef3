@@ -12,3 +12,1139 @@
 12. debug_para4     0
 
 
+1. gyro_K_P  1300
+2. gyro_K_I    80
+3. gyro_K_D   200
+4. vel_K_P   800
+5. vel_K_I     1
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1300
+2. gyro_K_I    80
+3. gyro_K_D   200
+4. vel_K_P   800
+5. vel_K_I     1
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1300
+2. gyro_K_I    80
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     2
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1300
+2. gyro_K_I    80
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     2
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1300
+2. gyro_K_I    80
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     2
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     2
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1300
+2. gyro_K_I    80
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     2
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1300
+2. gyro_K_I    80
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     2
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1300
+2. gyro_K_I    80
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     2
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1100
+2. gyro_K_I    80
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     2
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1000
+2. gyro_K_I    80
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     2
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1000
+2. gyro_K_I    20
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     2
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1000
+
+1. gyro_K_P  1000
+2. gyro_K_I    60
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     2
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1000
+2. gyro_K_I    60
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     2
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1000
+2. gyro_K_I    40
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     2
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P   500
+2. gyro_K_I    20
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     2
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P   500
+2. gyro_K_I    80
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     2
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P   500
+2. gyro_K_I    80
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P   800
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1200
+2. gyro_K_I     0
+3. gyro_K_D   100
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1500
+2. gyro_K_I     0
+3. gyro_K_D   500
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1100
+2. gyro_K_I     1
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1200
+2. gyro_K_I     5
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1200
+2. gyro_K_I    10
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1200
+2. gyro_K_I    10
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3   200
+12. debug_para4     0
+
+
+1. gyro_K_P  1200
+2. gyro_K_I    10
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3   400
+12. debug_para4     1
+
+
+1. gyro_K_P  1200
+2. gyro_K_I    10
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3   400
+12. debug_para4   200
+
+
+1. gyro_K_P  1200
+2. gyro_K_I    10
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P   900
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D  1000
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     0
+6. vel_K_D     0
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P  1200
+2. gyro_K_I    10
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     0
+6. vel_K_D     0
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P   100
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     0
+6. vel_K_D     0
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P     0
+5. vel_K_I     0
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1   200
+10. debug_para2   200
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1   300
+10. debug_para2   300
+11. debug_para3     0
+12. debug_para4     0
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3   300
+12. debug_para4   300
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3   400
+12. debug_para4   400
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     1
+11. debug_para3   350
+12. debug_para4   350
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   350
+12. debug_para4   350
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   350
+12. debug_para4   370
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   320
+12. debug_para4   350
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   350
+12. debug_para4     1
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   400
+12. debug_para4     1
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   400
+12. debug_para4     1
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   600
+12. debug_para4    10
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   300
+12. debug_para4    10
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   320
+12. debug_para4    10
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   320
+12. debug_para4   320
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   320
+12. debug_para4   340
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   320
+12. debug_para4   360
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   340
+12. debug_para4   380
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   340
+12. debug_para4   400
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   340
+12. debug_para4   390
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   330
+12. debug_para4   390
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D     0
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   330
+12. debug_para4   390
+
+
+1. gyro_K_P   900
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel     0
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   330
+12. debug_para4   390
+
+
+1. gyro_K_P   900
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   330
+12. debug_para4   390
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   330
+12. debug_para4   390
+
+
+1. gyro_K_P  1200
+2. gyro_K_I    20
+3. gyro_K_D   100
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   330
+12. debug_para4   390
+
+
+1. gyro_K_P  1300
+2. gyro_K_I    50
+3. gyro_K_D   300
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   330
+12. debug_para4   390
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   330
+12. debug_para4   390
+
+
+1. gyro_K_P   599
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   330
+12. debug_para4   390
+
+
+1. gyro_K_P   900
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   330
+12. debug_para4   390
+
+
+1. gyro_K_P  1100
+2. gyro_K_I     1
+3. gyro_K_D   200
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   330
+12. debug_para4   390
+
+
+1. gyro_K_P   900
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   330
+12. debug_para4   390
+
+
+1. gyro_K_P   900
+2. gyro_K_I     1
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   330
+12. debug_para4   390
+
+
+1. gyro_K_P   900
+2. gyro_K_I    10
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   330
+12. debug_para4   390
+
+
+1. gyro_K_P   900
+2. gyro_K_I     1
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   330
+12. debug_para4   390
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3   330
+12. debug_para4   390
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3    10
+12. debug_para4   100
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3    40
+12. debug_para4   400
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3    10
+12. debug_para4   400
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3    10
+12. debug_para4   200
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3    20
+12. debug_para4   200
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3    20
+12. debug_para4   300
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3    20
+12. debug_para4   300
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3    20
+12. debug_para4   250
+
+
+1. gyro_K_P     0
+2. gyro_K_I     0
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3    20
+12. debug_para4   250
+
+
+1. gyro_K_P   300
+2. gyro_K_I     1
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3    20
+12. debug_para4   250
+
+
+1. gyro_K_P   350
+2. gyro_K_I     5
+3. gyro_K_D     0
+4. vel_K_P   900
+5. vel_K_I     1
+6. vel_K_D   200
+7. vel_FF_accel   100
+8. vel_FF_vel  1000
+9. debug_para1     0
+10. debug_para2     5
+11. debug_para3    20
+12. debug_para4   250
+
+

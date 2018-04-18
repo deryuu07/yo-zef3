@@ -26,7 +26,7 @@
 #define max3 2279
 #define io3_thre 1000
 
-#define LED_SW_TH 3300
+#define LED_SW_TH 600
 
 short sens_ad[4];
 short sens_dis[4];
@@ -179,7 +179,7 @@ short LED_switch()
 
 	run_sens_ad();
 	get_sens_ad(ad);
-	if(ad[SENS_RS] > LED_SW_TH){
+	if(ad[2] > LED_SW_TH && ad[3] > LED_SW_TH){
 		return 0;
 	}
 	else{

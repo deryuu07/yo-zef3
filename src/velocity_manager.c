@@ -177,14 +177,14 @@ void calc_vel(short enc_dis)
 	short i;
 	float tmp_vel = (float)enc_dis * MMPP / DELTA_T;
 
-	// vel_pool[WINDOW_SIZE-1] = tmp_vel;
-	// sum_vel += vel_pool[WINDOW_SIZE-1];
-	// sum_vel -= vel_pool[0];
+	vel_pool[WINDOW_SIZE-1] = tmp_vel;
+	sum_vel += vel_pool[WINDOW_SIZE-1];
+	sum_vel -= vel_pool[0];
 
-	// for(i=0; i<WINDOW_SIZE-1; i++){
-	// 	vel_pool[i] = vel_pool[i+1];
-	// }
+	for(i=0; i<WINDOW_SIZE-1; i++){
+		vel_pool[i] = vel_pool[i+1];
+	}
 
-	// curr_vel = sum_vel / WINDOW_SIZE;
-	curr_vel = tmp_vel;
+	curr_vel = sum_vel / WINDOW_SIZE;
+//	curr_vel = tmp_vel;
 }

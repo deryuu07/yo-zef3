@@ -12,6 +12,8 @@ unsigned char smap[MAZE_SIZE][MAZE_SIZE];
 unsigned char sub_map[MAZE_SIZE][MAZE_SIZE];
 short mx = 0;
 short my = 0;
+short gx = 1;
+short gy = 3;
 short head_direction = NORTH;
 short current_run_state = STRAIGHT;
 
@@ -386,10 +388,63 @@ void update_head_direction()
 		
 }
 
+short calc_goal_dis(short tmp_x, short tmp_y)
+{
+	short tmp_dis = 0;
+
+	tmp_dis = abs(gx + gy - tmp_x - tmp_y);
+
+	return tmp_dis;
+}
+
+short determ_move()
+{
+	short move_state = STRAIGHT;
+	short tmp_state = STRAIGHT;
+	short min_dis = 256;
+	short tmp_dis = 0;
+
+	tmp_dis = calc_goal_dis(mx+1, my);
+	if(tmp_dis < min_dis){
+		min_dis = tmp_dis;
+		tmp_state = RIGHT_SLALOM;
+	} 
+
+	tmp_dis = calc_goal_dis(mx-1, my);
+	if(tmp_dis < min_dis){
+		min_dis = tmp_dis;
+		tmp_state = LEFT_SLALOM;
+	} 
+
+	tmp_dis = calc_goal_dis(mx, my+1);
+	if(tmp_dis < min_dis){
+		min_dis = tmp_dis;
+		tmp_state = STRAIGHT;
+	} 
+
+	tmp_dis = calc_goal_dis(mx, my-1);
+	if(tmp_dis < min_dis){
+		min_dis = tmp_dis;
+		tmp_state = U_TURN;
+	} 
+
+	switch(head_direction){
+		case NORTH: tmp_state += 0; break;
+		case EAST:  tmp_state += 0; break;
+		case SOUTH: tmp_state += 0; break;
+		case WEST:  tmp_state += 0; break;
+	}
+	move_state = tmp_state;
+
+	return move_state;
+}
+
 short map_manager()
 {
 	short move_state = STRAIGHT;
 	char g_wall = 0x00;
+
+	static short test_cnt = 0;
 
 	//向き更新
 	update_head_direction();
@@ -402,6 +457,20 @@ short map_manager()
 
 	//壁情報をマップに反映
 	update_map(g_wall);
+
+	//ゴールまでの距離を算出
+	move_state = determ_move();
+
+	if(test_cnt == 0){
+		move_state = RIGHT_SLALOM;
+	}
+	if(test_cnt == 1){
+		move_state = LEFT_SLALOM;
+	}
+	if(test_cnt == 2){
+		move_state = RIGHT_SLALOM;
+	}
+	test_cnt++;
 
 	return move_state;
 }

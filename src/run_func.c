@@ -69,13 +69,17 @@ short run_slalom()
     short result = 0;
 
     /***制御処理***/
+    set_run_state(run_state);
     update_accel2(ACCEL_STEP);
 	result = update_desire_gyro(run_state);
 
     /***終了処理***/
     get_angle(&curr_angle);
-    if((curr_angle >= 89.0 || curr_angle <= -89.0) && result == 1){
-//        run_state = map_manager();
+//    if((curr_angle >= 89.0 || curr_angle <= -89.0) && result == 1){
+    if(result == 1){
+        LED_on(0);
+        finish_cnt++;
+        run_state = map_manager();
         reset_dis();
         reset_gyro_I();
         reset_angle();
@@ -90,7 +94,7 @@ short run_straight()
     float curr_dis = 0.0;
 
     /***制御処理***/
-    set_run_state(STRAIGHT);
+    set_run_state(run_state);
     update_accel2(ACCEL_STEP);
 
     /***終了処理***/
@@ -112,6 +116,8 @@ short run_start_step()
     float curr_dis = 0.0;
 
     /***制御処理***/
+    set_Uturn_flag(0);
+    set_run_state(STRAIGHT);
     update_accel2(ACCEL_STEP);
 
     /***終了処理***/
@@ -120,6 +126,8 @@ short run_start_step()
         reset_dis();
         reset_gyro_I();
         reset_angle();
+
+        run_state = map_manager();
         return 1;
     }
 
@@ -150,6 +158,30 @@ void run_manager()
         start_step_flag = run_start_step();
     }
     else{
-        run_stop();
+        if(!run_state_flag){
+            switch(run_state){
+                case STRAIGHT:
+                    run_state_flag = run_straight();
+                    break;
+                case LEFT_SLALOM:
+                    run_state_flag = run_slalom();
+                    break;
+                case RIGHT_SLALOM:
+                    run_state_flag = run_slalom();
+                    break;
+            }   
+        }
+        else{
+            if(finish_cnt==3){
+                run_stop();
+            }
+            else{
+                run_state_flag = 0;
+            }
+        }
     }
+
+//    run_Uturn();
+
 }
+

@@ -6,6 +6,8 @@ short data_seq1[LOG_NUM];
 short data_seq2[LOG_NUM];
 short data_cnt1[LOG_NUM];
 short data_cnt2[LOG_NUM];
+short cnt1[LOG_NUM];
+short cnt2[LOG_NUM];
 short max_data_seq = 0;
 short log_cnt = 1;
 
@@ -26,6 +28,8 @@ void init_log()
 		data_seq2[i] = 0;
 		data_cnt1[i] = 0;
 		data_cnt2[i] = 0;
+		cnt1[i] = 0;
+		cnt2[i] = 0;
 	}
 
 	get_debug_para(&debug_para);
@@ -34,35 +38,33 @@ void init_log()
 		log_cnt = 1;
 }
 
-void get_sdata(short num, short data)
+void set_sdata(short num, short data)
 {
-	static short cnt = 0;
-	cnt++;
+	cnt1[num]++;
 
-	if(cnt == log_cnt){
+	if(cnt1[num] == log_cnt){
 		if(data_seq1[num] < LOG_SIZE){
 			slog[num][data_seq1[num]++] = data;
 			if(max_data_seq < data_seq1[num]){
 				max_data_seq = data_seq1[num];
 			}
 		}
-		cnt = 0;
+		cnt1[num] = 0;
 	}
 }
 
-void get_fdata(short num, float data)
+void set_fdata(short num, float data)
 {
-	static short cnt = 0;
-	cnt++;
+	cnt2[num]++;
 
-	if(cnt == log_cnt){
+	if(cnt2[num] == log_cnt){
 		if(data_seq2[num] < LOG_SIZE){
 			flog[num][data_seq2[num]++] = data;
 			if(max_data_seq < data_seq2[num]){
 				max_data_seq = data_seq2[num];
 			}
 		}
-		cnt = 0;
+		cnt2[num] = 0;
 	}
 }
 
@@ -102,6 +104,8 @@ void tera_out_log_data()
 			print_str(" ");
 		}
 		print_num(log_cnt, 5);
+		print_str(" ");
+		print_num(max_data_seq, 5);
 		print_str("\r\n");
 	}
 }

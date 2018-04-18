@@ -33,7 +33,7 @@ void acc_dis_update()
 void acc_vel_update()
 {
     acc_vel_x += acc_x; //acc * d_t * 1000 [mm/s]
-    acc_vel_y += acc_y;
+//    acc_vel_y += acc_y;
 }
 
 void acc_update()
@@ -42,7 +42,7 @@ void acc_update()
     acc_y = ((float)get_accelarator(1) / 2048.0f * 9.8f) - offset_y;
 
     acc_vel_update();
-    acc_dis_update();
+//    acc_dis_update();
 }
 
 void get_acc_dis_x(float *curr_dis)
@@ -59,8 +59,19 @@ void get_acc_dis_y(float *curr_dis)
 
 void get_acc_vel_xf(float *curr_vel)
 {
+    float enc_vel = 0.0;
+
+    if(curr_vel != NULL){
+        get_vel(&enc_vel);
+        *curr_vel = 0.7*acc_vel_x + 0.3*enc_vel;
+//        *curr_vel = acc_vel_x;
+    }
+}
+
+void get_acc_vel_yf(float *curr_vel)
+{
     if(curr_vel != NULL)
-        *curr_vel = acc_vel_x;
+        *curr_vel = acc_vel_y;
 }
 
 void get_acc(float *acc)
