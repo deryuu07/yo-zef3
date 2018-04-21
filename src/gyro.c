@@ -47,7 +47,7 @@ void gyro_update()
 
 void angle_update()
 {
-	gyro_angle += (gyro * 0.001);
+	gyro_angle += (gyro * 0.001f + 0.0006f);
 }
 
 void set_max_gyro(float value)
@@ -58,9 +58,9 @@ void set_max_gyro(float value)
 short update_desire_gyro(short run_state)
 {
 	if(run_state == LEFT_SLALOM){
-		if(gyro_angle < 66.7){
+		if(gyro_angle < 46.45f){
 			if(desire_gyro < desire_max_gyro){
-				gyro_accel = 6500.0;
+				gyro_accel = 9300.0f;
 				desire_gyro += gyro_accel*DELTA_T; 
 			}
 			else{
@@ -70,7 +70,7 @@ short update_desire_gyro(short run_state)
 		}
 		else{
 			if(desire_gyro > 0.0){
-				gyro_accel = -6500.0;
+				gyro_accel = -9300.0f;
 				desire_gyro += gyro_accel*DELTA_T; 
 			}
 			else{
@@ -81,9 +81,9 @@ short update_desire_gyro(short run_state)
 		}
 	}
 	if(run_state == RIGHT_SLALOM){
-		if(gyro_angle > -66.7){
+		if(gyro_angle > -46.45f){
 			if(desire_gyro > -desire_max_gyro){
-				gyro_accel = -6500.0;
+				gyro_accel = -9300.0;
 				desire_gyro += gyro_accel*DELTA_T; 
 			}
 			else{
@@ -93,7 +93,7 @@ short update_desire_gyro(short run_state)
 		}
 		else{
 			if(desire_gyro < 0.0){
-				gyro_accel = 6500.0;
+				gyro_accel = 9300.0;
 				desire_gyro += gyro_accel*DELTA_T; 
 			}
 			else{

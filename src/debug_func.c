@@ -22,7 +22,7 @@ void run_test()
     init_enc();
     set_accel_def(6000.0);
     set_max_vel(300.0);
-    set_max_gyro(550.0);
+    set_max_gyro(900.0);
     set_acc_offset();
     reset_acc_vel();
     reset_acc_dis();

@@ -129,8 +129,10 @@ void gyro_ctr(float *u_gyro)
 	u = para[0]*err + para[1]*gyro_sum_err + para[2]*pre_err;
 
 	get_gyro_accel(&curr_gyro_accel);
-	u -= 0.02*curr_gyro_accel;
-	u -= 0.25*curr_gyro;
+	// u -= 0.02*curr_gyro_accel;
+	// u -= 0.25*curr_gyro;
+	u -= 0.03*curr_gyro_accel;
+	u -= 0.22*curr_gyro;
 
 	*u_gyro = u;
 }

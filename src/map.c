@@ -294,6 +294,7 @@ void set_run_state(short curr_state)
 void update_map(char g_wall)
 {
 	wmap[my][mx] |= g_wall;
+	sub_map[my][mx] = 1;
 }
 
 char update_wall()
@@ -359,7 +360,7 @@ void update_position()
 		case EAST:  delta_lx2 = delta_ly;
 					delta_ly2 = -delta_lx;
 					break;
-		case SOUTH: delta_lx2 = delta_lx; 
+		case SOUTH: delta_lx2 = -delta_lx; 
 					delta_ly2 = -delta_ly;
 					break;
 		case WEST:  delta_lx2 = -delta_ly;
@@ -377,8 +378,8 @@ void update_head_direction()
 
 	switch(current_run_state){
 		case STRAIGHT:	   head_incr = 0; break;
-		case LEFT_SLALOM:  head_incr = 1; break;
-		case RIGHT_SLALOM: head_incr = -1; break;
+		case RIGHT_SLALOM:  head_incr = 1; break;
+		case LEFT_SLALOM: head_incr = -1; break;
 	}
 	head_direction += head_incr;
 	if(head_direction < 0)
@@ -446,11 +447,11 @@ short map_manager()
 
 	static short test_cnt = 0;
 
-	//向き更新
-	update_head_direction();
-
 	//位置更新
 	update_position();
+
+	//向き更新
+	update_head_direction();
 
 	//壁情報更新
 	g_wall = update_wall();
@@ -462,12 +463,36 @@ short map_manager()
 	move_state = determ_move();
 
 	if(test_cnt == 0){
-		move_state = RIGHT_SLALOM;
+		move_state = STRAIGHT;
 	}
 	if(test_cnt == 1){
-		move_state = LEFT_SLALOM;
+		move_state = STRAIGHT;
 	}
 	if(test_cnt == 2){
+		move_state = RIGHT_SLALOM;
+	}
+	if(test_cnt == 3){
+		move_state = RIGHT_SLALOM;
+	}
+	if(test_cnt == 4){
+		move_state = STRAIGHT;
+	}
+	if(test_cnt == 5){
+		move_state = STRAIGHT;
+	}
+	if(test_cnt == 6){
+		move_state = LEFT_SLALOM;
+	}
+	if(test_cnt == 7){
+		move_state = LEFT_SLALOM;
+	}
+	if(test_cnt == 8){
+		move_state = STRAIGHT;
+	}
+	if(test_cnt == 9){
+		move_state = LEFT_SLALOM;
+	}
+	if(test_cnt == 10){
 		move_state = RIGHT_SLALOM;
 	}
 	test_cnt++;

@@ -65,20 +65,46 @@ if(step_cnt == 2){
 
 short run_slalom()
 {
+    float curr_dis = 0.0;
     float curr_angle = 0.0;
     short result = 0;
+    static short slalom_step_cnt = 0;
 
     /***制御処理***/
     set_run_state(run_state);
     update_accel2(ACCEL_STEP);
-	result = update_desire_gyro(run_state);
+    get_dis(&curr_dis);
+
+    if(curr_dis < 10.0 && slalom_step_cnt == 0){
+	    update_desire_gyro(STRAIGHT);
+    }
+    if(curr_dis >= 10.0 && slalom_step_cnt == 0){
+	    slalom_step_cnt = 1;
+    }
+
+    if(slalom_step_cnt == 1){
+        LED_on(0);
+	    result = update_desire_gyro(run_state);
+    }
+    if(result == 1){
+        LED_on(1);
+        slalom_step_cnt = 2;
+        reset_dis();
+        curr_dis = 0.0;
+    }
+    if(slalom_step_cnt == 2){
+        if(curr_dis >= 10.0){
+            result = 2;
+        }
+    }
 
     /***終了処理***/
-    get_angle(&curr_angle);
+//    get_angle(&curr_angle);
 //    if((curr_angle >= 89.0 || curr_angle <= -89.0) && result == 1){
-    if(result == 1){
-        LED_on(0);
+    if(result == 2){
+        LED_reset();
         finish_cnt++;
+        slalom_step_cnt = 0;
         run_state = map_manager();
         reset_dis();
         reset_gyro_I();
@@ -172,7 +198,7 @@ void run_manager()
             }   
         }
         else{
-            if(finish_cnt==3){
+            if(finish_cnt==11){
                 run_stop();
             }
             else{
