@@ -74,7 +74,7 @@ void timer_call0()
 
 void timer_call1()
 {
-	short ad_dis[4];
+	short ad_io[4];
 	float curr_vel = 0.0;
 	float curr_desire_vel = 0.0;
 
@@ -82,11 +82,11 @@ void timer_call1()
 	calc_vel(get_vel_ENC());	// 速度を計算
 	update_ENC_dis();			// トータルの走行距離更新
 
-	get_sens_dis(ad_dis);
-	set_sdata(0, ad_dis[0]);
-	set_sdata(1, ad_dis[1]);
-	set_sdata(2, ad_dis[2]);
-	set_sdata(3, ad_dis[3]);
+	get_sens_io(ad_io);
+	set_sdata(0, ad_io[0]);
+	set_sdata(1, ad_io[1]);
+	set_sdata(2, ad_io[2]);
+	set_sdata(3, ad_io[3]);
 
 	/***制御***/
 	PID_ctr();

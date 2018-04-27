@@ -106,17 +106,21 @@ short update_desire_gyro(short run_state)
 	if(run_state == U_TURN){
 		if(gyro_angle < 144.5){
 			if(desire_gyro < 800.0){
-				desire_gyro += 9000.0*DELTA_T; 
+				gyro_accel = 9300.0;
+				desire_gyro += gyro_accel*DELTA_T; 
 			}
 			else{
+				gyro_accel = 0.0;
 				desire_gyro = 800.0; 
 			}
 		}
 		else{
 			if(desire_gyro > 0.0){
-				desire_gyro -= 9000.0*DELTA_T; 
+				gyro_accel = -9000.0;
+				desire_gyro += gyro_accel*DELTA_T; 
 			}
 			else{
+				gyro_accel = 0.0;
 				desire_gyro = 0.0; 
 				return 1;
 			}

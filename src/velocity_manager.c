@@ -56,8 +56,10 @@ void set_accel(float acc)
 	accel = acc;
 }
 
-void update_desire_vel(short state)
+short update_desire_vel(short state)
 {
+	short result = 0;
+
 	switch(state){
 		case ACCEL_STEP:
 			if(desire_vel < desire_max_vel){
@@ -67,6 +69,7 @@ void update_desire_vel(short state)
 			else{
 				set_accel(0.0);
 				desire_vel = desire_max_vel; 
+				result = 1;
 			}
 			break;
 
@@ -78,21 +81,26 @@ void update_desire_vel(short state)
 			else{
 				set_accel(0.0);
 				desire_vel = desire_max_vel; 
+				result = 1;
 			}
 			break;
 
 		case DECEL_STEP:
 			if(desire_vel > 0.0){
-				set_accel(-1.0f*accel_def);
+//				set_accel(-1.0f*accel_def);
+				set_accel(-2000.0f);
 				desire_vel += accel*DELTA_T; 
 			}
 			else{
 				set_accel(0.0);
 				desire_vel = 0.0; 
-				set_end_flag(0);
+//				set_end_flag(0);
+				result = 1;
 			}
 			break;
 	}
+
+	return result;
 }
 
 short accel_manager()
@@ -148,17 +156,21 @@ void update_accel()
 	}	
 }
 
-void update_accel2(short state)
+short update_accel2(short state)
 {
+	short result = 0;
+
 	if(state == ACCEL_STEP){
-		update_desire_vel(ACCEL_STEP);
+		result = update_desire_vel(ACCEL_STEP);
 	}
 	if(state == CONST_STEP){
-		update_desire_vel(ACCEL_STEP);
+		result = update_desire_vel(ACCEL_STEP);
 	}
 	if(state == DECEL_STEP){
-		update_desire_vel(DECEL_STEP);
+		result = update_desire_vel(DECEL_STEP);
 	}
+
+	return result;
 }
 
 void calc_accel_dis()

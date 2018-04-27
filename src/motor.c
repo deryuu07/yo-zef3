@@ -21,6 +21,12 @@ float vel_pre_val = 0.0;
 float gyro_sum_err = 0.0;
 float gyro_pre_val = 0.0;
 short Uturn_flag = 0;
+short sens_ctr_flag = 0;
+
+void set_sens_ctr_flag(short num)
+{
+	sens_ctr_flag = num;
+}
 
 void set_Uturn_flag(short num)
 {
@@ -129,12 +135,21 @@ void gyro_ctr(float *u_gyro)
 	u = para[0]*err + para[1]*gyro_sum_err + para[2]*pre_err;
 
 	get_gyro_accel(&curr_gyro_accel);
-	// u -= 0.02*curr_gyro_accel;
-	// u -= 0.25*curr_gyro;
 	u -= 0.03*curr_gyro_accel;
 	u -= 0.22*curr_gyro;
 
 	*u_gyro = u;
+}
+
+void sens_ctr(float *u_sens)
+{
+	float u = 0.0;
+	short sens_dis[4];
+	float err = (float)(sens_dis[1] - sens_dis[3]);
+
+	u = 10.0 * (-15.0 - err);
+
+	*u_sens = u;
 }
 
 void PID_ctr()
@@ -143,6 +158,7 @@ void PID_ctr()
 	float batt;
 	float u_r, u_l = 0.0;
 	float u_gyro = 0.0;
+	float u_sens = 0.0;
 	float u_vel_r, u_vel_l = 0.0;
 	short mot_r, mot_l = 0;
 	float ff_para[2];
@@ -152,14 +168,23 @@ void PID_ctr()
 	batt = (float)sbatt;
 	
 	/***速度制御***/
-	vel_ctr(&u_vel_r, &u_vel_l);
-	u_r += u_vel_r;
-	u_l += u_vel_l;
+	if(!Uturn_flag){
+		vel_ctr(&u_vel_r, &u_vel_l);
+		u_r += u_vel_r;
+		u_l += u_vel_l;
+	}
 
 	/***姿勢制御***/
 	gyro_ctr(&u_gyro);
 	u_r -= u_gyro;
 	u_l += u_gyro;
+
+	/***壁センサで制御***/
+	if(sens_ctr_flag == 1){
+		sens_ctr(&u_sens);
+		u_r += u_sens;
+		u_l -= u_sens;
+	}
 
 	// get_debug_para(&debug_para);
 	// u_r = debug_para[2];

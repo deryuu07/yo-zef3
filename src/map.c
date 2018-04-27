@@ -389,6 +389,31 @@ void update_head_direction()
 		
 }
 
+short calc_cost(short st_cst, short rs_cst, short ls_cst)
+{
+	short result = STRAIGHT;
+	short min_cst = st_cst;
+
+	if(st_cst > 254 && rs_cst > 254 && ls_cst > 254)
+	{
+		result = U_TURN;
+	}
+	else{
+		if(min_cst < rs_cst){
+			min_cst = rs_cst;
+		}
+		if(min_cst < ls_cst){
+			min_cst = ls_cst;
+		}
+
+		if(min_cst == st_cst) result = STRAIGHT;
+		if(min_cst == rs_cst) result = RIGHT_SLALOM;
+		if(min_cst == ls_cst) result = LEFT_SLALOM;
+	}
+
+	return result;
+}
+
 short calc_goal_dis(short tmp_x, short tmp_y)
 {
 	short tmp_dis = 0;
@@ -400,42 +425,66 @@ short calc_goal_dis(short tmp_x, short tmp_y)
 
 short determ_move()
 {
+	short straight_cost = 0;
+	short right_slalom_cost = 0;
+	short left_slalom_cost = 0;
+	short Uturn_cost = 0;
 	short move_state = STRAIGHT;
-	short tmp_state = STRAIGHT;
-	short min_dis = 256;
 	short tmp_dis = 0;
 
-	tmp_dis = calc_goal_dis(mx+1, my);
-	if(tmp_dis < min_dis){
-		min_dis = tmp_dis;
-		tmp_state = RIGHT_SLALOM;
-	} 
-
-	tmp_dis = calc_goal_dis(mx-1, my);
-	if(tmp_dis < min_dis){
-		min_dis = tmp_dis;
-		tmp_state = LEFT_SLALOM;
-	} 
-
-	tmp_dis = calc_goal_dis(mx, my+1);
-	if(tmp_dis < min_dis){
-		min_dis = tmp_dis;
-		tmp_state = STRAIGHT;
-	} 
-
-	tmp_dis = calc_goal_dis(mx, my-1);
-	if(tmp_dis < min_dis){
-		min_dis = tmp_dis;
-		tmp_state = U_TURN;
-	} 
-
 	switch(head_direction){
-		case NORTH: tmp_state += 0; break;
-		case EAST:  tmp_state += 0; break;
-		case SOUTH: tmp_state += 0; break;
-		case WEST:  tmp_state += 0; break;
+		case NORTH:
+			if(wmap[my][mx]&0x01 == 0x01) straight_cost = 255;
+			if(wmap[my][mx]&0x02 == 0x02) right_slalom_cost = 255;
+			if(wmap[my][mx]&0x08 == 0x08) left_slalom_cost = 255;
+			tmp_dis = calc_goal_dis(mx, my+1);
+			straight_cost += tmp_dis;
+			tmp_dis = calc_goal_dis(mx+1, my);
+			right_slalom_cost += tmp_dis;
+			tmp_dis = calc_goal_dis(mx-1, my);
+			left_slalom_cost += tmp_dis;
+			move_state = calc_cost(straight_cost, right_slalom_cost, left_slalom_cost);
+			break;
+
+		case EAST:
+			if(wmap[my][mx]&0x01 == 0x01) left_slalom_cost = 255;
+			if(wmap[my][mx]&0x02 == 0x02) straight_cost = 255;
+			if(wmap[my][mx]&0x04 == 0x04) right_slalom_cost = 255;
+			tmp_dis = calc_goal_dis(mx, my+1);
+			right_slalom_cost += tmp_dis;
+			tmp_dis = calc_goal_dis(mx+1, my);
+			straight_cost += tmp_dis;
+			tmp_dis = calc_goal_dis(mx, my-1);
+			left_slalom_cost += tmp_dis;
+			move_state = calc_cost(straight_cost, right_slalom_cost, left_slalom_cost);
+			break;
+	
+		case SOUTH:
+			if(wmap[my][mx]&0x04 == 0x04) straight_cost = 255;
+			if(wmap[my][mx]&0x02 == 0x02) left_slalom_cost = 255;
+			if(wmap[my][mx]&0x08 == 0x08) right_slalom_cost = 255;
+			tmp_dis = calc_goal_dis(mx, my-1);
+			straight_cost += tmp_dis;
+			tmp_dis = calc_goal_dis(mx+1, my);
+			left_slalom_cost += tmp_dis;
+			tmp_dis = calc_goal_dis(mx-1, my);
+			right_slalom_cost += tmp_dis;
+			move_state = calc_cost(straight_cost, right_slalom_cost, left_slalom_cost);
+			break;
+
+		case WEST:
+			if(wmap[my][mx]&0x01 == 0x01) right_slalom_cost = 255;
+			if(wmap[my][mx]&0x04 == 0x04) left_slalom_cost = 255;
+			if(wmap[my][mx]&0x08 == 0x08) straight_cost = 255;
+			tmp_dis = calc_goal_dis(mx, my+1);
+			right_slalom_cost += tmp_dis;
+			tmp_dis = calc_goal_dis(mx, my-1);
+			left_slalom_cost += tmp_dis;
+			tmp_dis = calc_goal_dis(mx-1, my);
+			straight_cost += tmp_dis;
+			move_state = calc_cost(straight_cost, right_slalom_cost, left_slalom_cost);
+			break;
 	}
-	move_state = tmp_state;
 
 	return move_state;
 }
@@ -461,7 +510,6 @@ short map_manager()
 
 	//ゴールまでの距離を算出
 	move_state = determ_move();
-
 	if(test_cnt == 0){
 		move_state = STRAIGHT;
 	}
@@ -469,32 +517,42 @@ short map_manager()
 		move_state = STRAIGHT;
 	}
 	if(test_cnt == 2){
-		move_state = RIGHT_SLALOM;
+		move_state = U_TURN;
 	}
-	if(test_cnt == 3){
-		move_state = RIGHT_SLALOM;
-	}
-	if(test_cnt == 4){
-		move_state = STRAIGHT;
-	}
-	if(test_cnt == 5){
-		move_state = STRAIGHT;
-	}
-	if(test_cnt == 6){
-		move_state = LEFT_SLALOM;
-	}
-	if(test_cnt == 7){
-		move_state = LEFT_SLALOM;
-	}
-	if(test_cnt == 8){
-		move_state = STRAIGHT;
-	}
-	if(test_cnt == 9){
-		move_state = LEFT_SLALOM;
-	}
-	if(test_cnt == 10){
-		move_state = RIGHT_SLALOM;
-	}
+
+	// if(test_cnt == 0){
+	// 	move_state = RIGHT_SLALOM;
+	// }
+	// if(test_cnt == 1){
+	// 	move_state = LEFT_SLALOM;
+	// }
+	// if(test_cnt == 2){
+	// 	move_state = RIGHT_SLALOM;
+	// }
+	// if(test_cnt == 3){
+	// 	move_state = LEFT_SLALOM;
+	// }
+	// if(test_cnt == 4){
+	// 	move_state = RIGHT_SLALOM;
+	// }
+	// if(test_cnt == 5){
+	// 	move_state = RIGHT_SLALOM;
+	// }
+	// if(test_cnt == 6){
+	// 	move_state = RIGHT_SLALOM;
+	// }
+	// if(test_cnt == 7){
+	// 	move_state = LEFT_SLALOM;
+	// }
+	// if(test_cnt == 8){
+	// 	move_state = RIGHT_SLALOM;
+	// }
+	// if(test_cnt == 9){
+	// 	move_state = LEFT_SLALOM;
+	// }
+	// if(test_cnt == 10){
+	// 	move_state = RIGHT_SLALOM;
+	// }
 	test_cnt++;
 
 	return move_state;
